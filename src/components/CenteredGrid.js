@@ -2,14 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import TopTable from './TopTable';
-import MiddleTable from './MiddleTable';
 import MiddleCard from './MiddleCard';
 import RightDataChart from './RightDataChart';
 import topTableData from '../data/TopTableData';
 import middleTableData from '../data/MiddleTableData';
 import lowerConsoleData from '../data/LowerConsloeData';
-import LowerTabs from './LowerTabs';
-import { Card, CardHeader, CardContent, Paper } from '@material-ui/core';
+import { Paper } from '@material-ui/core';
 import TableFilters from './TableFilters';
 import LowerConsole from './LowerConsole';
 import MiddleCardContent from './MiddleCardContent';
@@ -23,15 +21,23 @@ const useStyles = makeStyles((theme) => ({
     },
     topTable: {
         maxHeight: 300,
-        overflow: 'hidden'
-
+        overflow: 'hidden',
+        '@media (max-width:1280px)': {
+            maxHeight: 160
+        }
     },
     middleTable: {
         maxHeight: 250,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        '@media (max-width:1280px)': {
+            maxHeight: 150
+        }
     },
     lowerTable: {
-        maxHeight: 200
+        maxHeight: 200,
+        '@media (max-width:1280px)': {
+            maxHeight: 150
+        }
     }
 }));
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import { makeStyles } from '@material-ui/core/styles';
-import Theme from './ui/Theme';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,7 +27,7 @@ function StatusIcon({content}) {
     const classes = useStyles();
 
     return (
-        <div className={`${classes.flex} ${content == 'Active' ? classes.active : classes.canceled}`}>
+        <div className={`${classes.flex} ${content === 'Active' ? classes.active : classes.canceled}`}>
             <RadioButtonCheckedIcon className={classes.icon} />
             {content}
         </div>

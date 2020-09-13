@@ -5,12 +5,11 @@ import {
   ArgumentAxis,
   ValueAxis,
   AreaSeries,
-  Legend,
 } from '@devexpress/dx-react-chart-material-ui';
 
 import { ArgumentScale, Animation } from '@devexpress/dx-react-chart';
 import { scalePoint } from 'd3-scale';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const data = [
   { year: 'feb', ios: 465 },
@@ -27,7 +26,8 @@ const chartRootStyles = (theme) => ({
   chart: {
     padding: '10px',
     maxHeight: 120,
-    backgroundColor: theme.palette.secondary.main
+    backgroundColor: theme.palette.secondary.main,
+    
   }
 })
 

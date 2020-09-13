@@ -2,8 +2,7 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import SyncAltIcon from '@material-ui/icons/SyncAlt';
-import Typography from '@material-ui/core/Typography';
-import { CardHeader, Grid, CardActions, Icon, CardContent, Button } from '@material-ui/core';
+import { CardHeader, CardContent } from '@material-ui/core';
 import ChartButtons from './ChartButtons';
 import ConsoleButtons from './ConsoleButtons';
 
@@ -11,7 +10,8 @@ import ConsoleButtons from './ConsoleButtons';
 const StyledCardContent = withStyles((theme) => ({
   root: {
     
-      padding: 0
+      padding: 0,
+      
     
   }
 }))(CardContent);
@@ -25,7 +25,10 @@ const StyledCardHeader = withStyles((theme) => ({
    
   },
   title: {
-    fontSize: '0.625rem'
+    fontSize: '0.625rem',
+    '@media (max-width:1280px)': {
+      fontSize: '0.5rem',
+    }
   }
 }))(CardHeader);
 
@@ -33,7 +36,9 @@ const StyledCardHeader = withStyles((theme) => ({
 const useStyles = makeStyles((theme) => ({
   root: {
     maxHeight: 200,
-    
+    '@media (max-width:1280px)': {
+      maxHeight: 100
+  }
   },
   cardHeader: {
     borderBottom: '1px solid white',
@@ -65,13 +70,13 @@ export default function MiddleCard({id, children}) {
     <Card className={classes.root}>
       <StyledCardHeader className={classes.cardHeader}
         avatar={
-          id == 'middle-card' && <SyncAltIcon />
+          id === 'middle-card' && <SyncAltIcon />
         }
 
         action={
-          id == 'right-chart' ? <ChartButtons  /> : id == 'lower-console' ? <ConsoleButtons  /> : ''
+          id === 'right-chart' ? <ChartButtons  /> : id === 'lower-console' ? <ConsoleButtons  /> : ''
         }
-        title={id == 'middle-card' ? 'BTC-USD' : id == 'right-chart' ? 'BTC-USD-CME' : ''}
+        title={id === 'middle-card' ? 'BTC-USD' : id === 'right-chart' ? 'BTC-USD-CME' : ''}
       >
 
       </StyledCardHeader>

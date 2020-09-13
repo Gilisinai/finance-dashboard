@@ -1,10 +1,7 @@
 import React from 'react';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
 import Chip from '@material-ui/core/Chip';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import TableCell from '@material-ui/core/TableCell';
 import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -34,7 +31,7 @@ function TableFilters({ id }) {
     };
 
     return (
-        id == 'status-table' ?
+        id === 'status-table' ?
             <div className={classes.filterContainer}>
                 <Typography style={{ display: 'inline' }} variant="body1" > Filters Applied: </Typography>
                 <StyledFilter variant="outlined" label="Filter 1" size="small" deleteIcon={<CloseIcon />} onDelete={handleDelete} />

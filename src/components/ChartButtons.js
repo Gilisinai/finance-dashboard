@@ -8,7 +8,12 @@ const StyledButton = withStyles((theme) => ({
         minWidth: 24,
         boxShadow: 'none',
         margin: 4,
-        fontSize: '0.6rem'
+        fontSize: '0.6rem',
+        '@media (max-width:1280px)': {
+          minWidth: 20,
+          margin: 1,
+          fontSize: '0.5rem',
+      }
     }
   }))(Button);
 

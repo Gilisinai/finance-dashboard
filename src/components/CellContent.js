@@ -3,10 +3,10 @@ import StatusIcon from './StatusIcon'
 
 function CellContent({id, content}) {
     return (
-      id == 'status-table' ? 
-      <div> {content == 'active' ? 
+      id === 'status-table' ? 
+      <div> {content === 'active' ? 
       <StatusIcon content={'Active'}/> :
-       content == 'cenceled' ? 
+       content === 'cenceled' ? 
        <StatusIcon content={'Canceled'}/> 
        : content} 
        </div> : 

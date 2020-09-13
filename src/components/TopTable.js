@@ -9,24 +9,31 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Theme from './ui/Theme';
 import CellContent from './CellContent';
-import Chip from '@material-ui/core/Chip';
-import TableFilters from './TableFilters';
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
     paddingLeft: 6,
     paddingTop: 2,
     paddingBottom: 2,
-    fontSize: 10
+    fontSize: 10,
+    '@media (max-width:1280px)': {
+     fontSize: 7,
+     paddingRight: 0
+  }
   },
   body: {
     paddingLeft: 6,
     paddingTop: 2,
     paddingBottom: 2,
+    '@media (max-width:1280px)': {
+      fontSize: 8
+  }
   },
+  
 }))(TableCell);
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
 
   tabelRow: {
     maxHeight: 10
@@ -34,19 +41,20 @@ const useStyles = makeStyles({
   tableBody: {
     overflow: 'auto',
     maxHeight: 200,
-    backgroundColor: Theme.palette.secondary.main
+    backgroundColor: Theme.palette.secondary.main,
+    
   },
   tableHead: {
     backgroundColor: Theme.palette.primary.main
   }
-});
+}));
 
 
 export default function TopTable({ data, id }) {
   const classes = useStyles();
 
   return (
-    <TableContainer className={classes.tableContainer} component={Paper}>
+    <TableContainer  component={Paper}>
       <Table stickyHeader className={classes.table} size="small">
         <TableHead >
           <TableRow>
@@ -61,7 +69,7 @@ export default function TopTable({ data, id }) {
           </TableRow>
         </TableHead>
       </Table>
-      <div style={{ overflow: 'auto', maxHeight: `${id == 'middle-table' ? '200px' : '250px'}` }}>
+      <div style={{ overflow: 'auto', maxHeight: `${id === 'middle-table' ? '200px' : '250px'}` }}>
       <Table>
 
         <TableBody className={classes.tableBody}>

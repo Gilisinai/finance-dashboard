@@ -1,12 +1,16 @@
 import React from 'react'
 import Button from '@material-ui/core/Button';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import SaveIcon from '@material-ui/icons/Save';
 import Chip from '@material-ui/core/Chip';
+import SendIcon from '@material-ui/icons/Send';
 
 const StyledButton = withStyles((theme) => ({
     contained: {
-        color: 'white'
+        color: 'white',
+        '@media (max-width:1280px)': {
+            padding: '2px 6px',
+            fontSize: 8
+        }
     },
     root: {
         textTransform: 'unset'
@@ -19,7 +23,8 @@ const StyledFilter = withStyles((theme) => ({
         height: 16,
         width:  '33%',
         margin: '2px 1px',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        
     },
     labelSmall: {
         paddingLeft: 2
@@ -48,13 +53,17 @@ const useStyles = makeStyles((theme) => ({
     },
     icon: {
         '&:first-child': {
-            fontSize: '38px'
+            fontSize: '38px',
+            '@media (max-width:1280px)': {
+                fontSize: '20px',
+            }
         }
     },
     filterContainer: {
         display: 'flex',
         width: '90%'
-    }
+    },
+   
 }));
 
 function MiddleCardContent() {
@@ -66,7 +75,7 @@ function MiddleCardContent() {
                 <StyledButton
                     variant="contained"
                     className={classes.sell}
-                    startIcon={<SaveIcon className={classes.icon} />}
+                    startIcon={<SendIcon className={classes.icon} />}
                 >
                     <div className={classes.alignLeft}>
                         <div >9562.47</div>
@@ -81,7 +90,7 @@ function MiddleCardContent() {
                 <StyledButton
                     variant="contained"
                     className={classes.buy}
-                    startIcon={<SaveIcon className={classes.icon} />}
+                    startIcon={<SendIcon className={classes.icon} />}
                 >
                     <div className={classes.alignLeft}>
                         <div>9562.47</div>

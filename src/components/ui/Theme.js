@@ -2,7 +2,8 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 
 
-export default createMuiTheme({
+
+let theme = createMuiTheme({
     palette: {
         type: 'dark',
         primary: {
@@ -20,6 +21,14 @@ export default createMuiTheme({
         
     },
     typography: {
-        fontSize:10
+        fontSize: 10,
+        
     }
 })
+
+
+   
+
+
+
+export default theme
