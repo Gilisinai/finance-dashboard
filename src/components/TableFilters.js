@@ -19,6 +19,9 @@ const StyledFilter = withStyles((theme) => ({
         height: 16,
         margin: '2px 5px'
     },
+    labelSmall: {
+        paddingRight: 20
+    }
 
 }))(Chip);
 
@@ -33,14 +36,14 @@ function TableFilters({ id }) {
     return (
         id === 'status-table' ?
             <div className={classes.filterContainer}>
-                <Typography style={{ display: 'inline' }} variant="body1" > Filters Applied: </Typography>
+                <Typography style={{ display: 'inline' }} variant="body1" > FILLTERS APPLIED: </Typography>
                 <StyledFilter variant="outlined" label="Filter 1" size="small" deleteIcon={<CloseIcon />} onDelete={handleDelete} />
                 <StyledFilter variant="outlined" label="Filter 1" size="small" deleteIcon={<CloseIcon />} onDelete={handleDelete} />
                 <StyledFilter variant="outlined" label="Filter 1" size="small" deleteIcon={<CloseIcon />} onDelete={handleDelete} />
             </div>
             :
             <div className={classes.filterContainer}>
-                <Typography style={{ display: 'inline' }} variant="body1" > Threshold: 12234325 </Typography>
+                <Typography style={{ display: 'inline' }} variant="body1" > THRESHOLD: 122345 </Typography>
             </div>
 
 

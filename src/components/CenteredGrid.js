@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import TopTable from './TopTable';
 import MiddleCard from './MiddleCard';
-import RightDataChart from './RightDataChart';
 import topTableData from '../data/TopTableData';
 import middleTableData from '../data/MiddleTableData';
 import lowerConsoleData from '../data/LowerConsloeData';
@@ -11,6 +10,7 @@ import { Paper } from '@material-ui/core';
 import TableFilters from './TableFilters';
 import LowerConsole from './LowerConsole';
 import MiddleCardContent from './MiddleCardContent';
+import RightChart from './RightChart'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -105,29 +105,30 @@ export default function CenteredGrid() {
                             <Grid container spacing={1} direction="row">
                                 <Grid item xs={6}>
                                     <MiddleCard id={'right-chart'}>
-                                        <RightDataChart />
+                                    <RightChart />
                                     </MiddleCard>
                                 </Grid>
                                 <Grid item xs={6}>
                                     <MiddleCard id={'right-chart'}>
-                                        <RightDataChart />
+                                    <RightChart />
                                     </MiddleCard>
                                 </Grid>
                                 <Grid item xs={6}>
                                     <MiddleCard id={'right-chart'}>
-                                        <RightDataChart />
+                                    <RightChart />
                                     </MiddleCard>
                                 </Grid>
                                 <Grid item xs={6}>
                                     <MiddleCard id={'right-chart'}>
-                                        <RightDataChart />
+                                    <RightChart />
                                     </MiddleCard>
                                 </Grid>
                                 <Grid item xs={6}>
                                     <MiddleCard id={'right-chart'}>
-                                        <RightDataChart />
+                                    <RightChart />
                                     </MiddleCard>
                                 </Grid>
+                               
                             </Grid>
                         </Grid>
                     </Grid>

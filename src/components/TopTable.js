@@ -59,7 +59,7 @@ export default function TopTable({ data, id }) {
         <TableHead >
           <TableRow>
             {Object.entries(data[0]).map((value, index) => (
-              <StyledTableCell className={classes.tableHead} align="left" key={index}>
+              <StyledTableCell className={classes.tableHead} align="left" key={index} component="th" >
                 {value[0].replace(/_/g, ' ').toUpperCase()}
 
 
